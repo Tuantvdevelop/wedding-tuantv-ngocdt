@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thái Trường An & Phạm Thanh Huyền - Wedding Invitation</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -567,6 +567,138 @@
 
         .h-r7-c4 {
             grid-area: 7 / 4;
+        }
+
+        /* Love Story Section */
+        .love-story {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff9f0 0%, #fdf5e6 100%);
+            text-align: center;
+        }
+
+        .love-story-quote {
+            max-width: 760px;
+            margin: 0 auto 60px;
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 1.18rem;
+            line-height: 2;
+            color: #6b5040;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .love-story-quote::before {
+            content: '\201C';
+            font-size: 5rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .love-story-quote::after {
+            content: '\201D';
+            font-size: 5rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .love-story-image-wrap {
+            position: relative;
+            display: inline-block;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            min-height: 500px;
+        }
+
+        .love-story-image-wrap img {
+            width: 100%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .love-story-calendar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 18px 24px 22px;
+            color: #333;
+        }
+
+        .love-story-calendar .cal-month-title {
+            font-family: 'Dancing Script', 'Brush Script MT', cursive;
+            font-size: 2.4rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .love-story-calendar .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px 0;
+            text-align: center;
+        }
+
+        .love-story-calendar .cal-dow {
+            font-size: 0.7rem;
+            color: #888;
+            font-weight: 600;
+            padding: 4px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .love-story-calendar .cal-date {
+            font-size: 0.88rem;
+            color: #444;
+            position: relative;
+            font-weight: 400;
+            line-height: 1;
+            padding: 5px;
+        }
+
+        .love-story-calendar .cal-date.empty {
+            color: transparent;
+        }
+
+        .love-story-calendar .cal-date.wedding-day {
+            color: #fff;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .love-story-calendar .cal-date.wedding-day::before {
+            content: '❤';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 38px;
+            color: #e8274b;
+            line-height: 1;
+            z-index: -1;
+            background: none;
+            width: auto;
+            height: auto;
         }
 
         /* Wishes */
@@ -1725,11 +1857,11 @@
             <div class="couple-grid">
                 <div class="person-card" data-aos="fade-right">
                     <div class="image-frame">
-                        <img src="images/codau.png" alt="Bride" loading="lazy" decoding="async">
+                        <img src="images/DSC05889.jpg" alt="Bride" loading="lazy" decoding="async">
                     </div>
                     <h2 class="person-name">Thanh Huyền</h2>
                     <p style="font-weight: 600; color: var(--primary-color);">2002</p>
-                    <p class="person-quote">"Tôi hạnh phúc khi ở bên anh ấy"</p>
+                    <p class="person-quote">"Có anh bên cạnh, mỗi ngày đều là ngày đẹp nhất của em."</p>
                 </div>
                 <div class="person-card" data-aos="fade-left">
                     <div class="image-frame">
@@ -1737,7 +1869,84 @@
                     </div>
                     <h2 class="person-name">Trường An</h2>
                     <p style="font-weight: 600; color: var(--primary-color);">1998</p>
-                    <p class="person-quote">"Vợ là nóc nhà"</p>
+                    <p class="person-quote">"Vợ là nóc nhà — mà anh tự nguyện làm cột nhà, suốt đời chống đỡ."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Story Section -->
+    <section class="love-story" id="love-story">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Chuyện Tình Yêu</h2>
+            <p class="love-story-quote" data-aos="fade-up" data-aos-delay="100">
+                Gặp nhau là duyên số, yêu nhau là tình cờ, nhưng bên nhau là sự lựa chọn. Từ những người lạ thành
+                người thương, rồi thành một phần không thể thiếu trong cuộc sống của nhau. Tình yêu của chúng mình
+                được bồi đắp bởi những chuyến đi, những bữa tối muộn và cả những lời hứa cùng nhau già đi. Cảm ơn
+                bạn đã ghé thăm hành trình nhỏ này để cùng chúng mình lan tỏa niềm hạnh phúc trong ngày chung đôi.
+            </p>
+            <div class="love-story-image-wrap" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/DSC06284.jpg" alt="Trường An & Thanh Huyền" loading="lazy" decoding="async">
+                <div class="love-story-calendar">
+                    <div class="cal-month-title">Tháng 03</div>
+                    <div class="cal-grid">
+                        <!-- Day of week headers -->
+                        <div class="cal-dow">T2</div>
+                        <div class="cal-dow">T3</div>
+                        <div class="cal-dow">T4</div>
+                        <div class="cal-dow">T5</div>
+                        <div class="cal-dow">T6</div>
+                        <div class="cal-dow">T7</div>
+                        <div class="cal-dow" style="color:#e8274b;">CN</div>
+                        <!-- Week 1: March 1 = Sunday -->
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date" style="color:#e8274b;">1</div>
+                        <!-- Week 2 -->
+                        <div class="cal-date">2</div>
+                        <div class="cal-date">3</div>
+                        <div class="cal-date">4</div>
+                        <div class="cal-date">5</div>
+                        <div class="cal-date">6</div>
+                        <div class="cal-date">7</div>
+                        <div class="cal-date" style="color:#e8274b;">8</div>
+                        <!-- Week 3: Day 9 = wedding day -->
+                        <div class="cal-date wedding-day">9</div>
+                        <div class="cal-date">10</div>
+                        <div class="cal-date">11</div>
+                        <div class="cal-date">12</div>
+                        <div class="cal-date">13</div>
+                        <div class="cal-date">14</div>
+                        <div class="cal-date" style="color:#e8274b;">15</div>
+                        <!-- Week 4 -->
+                        <div class="cal-date">16</div>
+                        <div class="cal-date">17</div>
+                        <div class="cal-date">18</div>
+                        <div class="cal-date">19</div>
+                        <div class="cal-date">20</div>
+                        <div class="cal-date">21</div>
+                        <div class="cal-date" style="color:#e8274b;">22</div>
+                        <!-- Week 5 -->
+                        <div class="cal-date">23</div>
+                        <div class="cal-date">24</div>
+                        <div class="cal-date">25</div>
+                        <div class="cal-date">26</div>
+                        <div class="cal-date">27</div>
+                        <div class="cal-date">28</div>
+                        <div class="cal-date" style="color:#e8274b;">29</div>
+                        <!-- Week 6 -->
+                        <div class="cal-date">30</div>
+                        <div class="cal-date">31</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                        <div class="cal-date empty">-</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1897,15 +2106,6 @@
                     <div class="swiper-slide"><img src="images/DSC04764.jpg" loading="lazy" decoding="async"></div>
                     <div class="swiper-slide"><img src="images/DSC04863.jpg" loading="lazy" decoding="async"></div>
                     <div class="swiper-slide"><img src="images/DSC04912.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC04939.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05020.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05025.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05043.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05054.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05364.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05434.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05514.jpg" loading="lazy" decoding="async"></div>
-                    <div class="swiper-slide"><img src="images/DSC05586.jpg" loading="lazy" decoding="async"></div>
                     <div class="swiper-slide"><img src="images/DSC05605.jpg" loading="lazy" decoding="async"></div>
                     <div class="swiper-slide"><img src="images/DSC05630.jpg" loading="lazy" decoding="async"></div>
                     <div class="swiper-slide"><img src="images/DSC05667.jpg" loading="lazy" decoding="async"></div>
