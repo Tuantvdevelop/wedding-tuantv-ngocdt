@@ -2441,6 +2441,7 @@
                 </div>
                 <p class="intro-date">2 tháng 5, 2026</p>
                 <p class="intro-honor">Thân mời</p>
+                <!-- Tên hiển thị: ?moi=... | ?nguoi_moi=... | ?guest=... | ?ten=... | ?khach=... | ?to=... -->
                 <p class="intro-guest-pill" id="introGuestName">Quý khách</p>
                 <p class="intro-subline">đến dự buổi tiệc chung vui cùng gia đình chúng mình.</p>
                 <button type="button" class="intro-open-btn" onclick="skipIntro()">Mở thiệp</button>
@@ -3034,14 +3035,28 @@
     </div>
 
     <script>
-        // ===== INTRO: tên khách từ URL ?guest=... (vd: ?guest=Gia%20đình%20Anh%20Mạnh) =====
+        // ===== INTRO: tên trên thiệp = query động (không có tham số → giữ "Quý khách") =====
+        // Thứ tự ưu tiên: moi → nguoi_moi → guest → ten → khach → to
+        // Ví dụ: index.html?moi=Gia%20đình%20Anh%20Mạnh
         (function () {
             const guestEl = document.getElementById('introGuestName');
             if (!guestEl) return;
+            const inviteeKeys = ['moi', 'nguoi_moi', 'guest', 'ten', 'khach', 'to'];
             try {
-                const q = new URLSearchParams(window.location.search).get('guest');
-                if (q && q.trim()) {
-                    guestEl.textContent = decodeURIComponent(q.trim());
+                const params = new URLSearchParams(window.location.search);
+                let text = null;
+                for (let i = 0; i < inviteeKeys.length; i++) {
+                    const raw = params.get(inviteeKeys[i]);
+                    if (raw != null && String(raw).trim() !== '') {
+                        text = String(raw).trim();
+                        break;
+                    }
+                }
+                if (text) {
+                    if (text.length > 120) {
+                        text = text.slice(0, 120) + '…';
+                    }
+                    guestEl.textContent = text;
                 }
             } catch (e) { /* giữ mặc định */ }
         })();
